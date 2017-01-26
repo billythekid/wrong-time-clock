@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use Carbon\Carbon;
+
+Route::get('/', function ()
+{
+    $randomOffset  = random_int(1, 1439);
+    $forwardOrBack = array_rand([1, -1]);
+    $time = Carbon::now()->subMinutes($forwardOrBack * $randomOffset);
+    return view('clock', compact('time'));
 });
