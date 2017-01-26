@@ -1,5 +1,5 @@
 @spaceless
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <div class="content">
         <span>The time is not…</span>
         <div class="title">
-            <span>{!! $time->format('l jS \\of F Y <b\r>g:i:s A') !!}</span>
+            <span>{!! $time->format('l jS \\of F Y<b\r>g:i:s A') !!}</span>
         </div>
         <div>
             <small>…it's actually {{ \Carbon\Carbon::now()->diffForHumans($time) }} that!</small>
