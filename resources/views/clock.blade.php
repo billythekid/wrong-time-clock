@@ -9,7 +9,7 @@
     <div class="content">
         <span>The time is not…</span>
         <div class="title">
-            <span>{!! $time->format('l jS \\of F Y <b\r>h:i:s A') !!}</span>
+            <span>{!! $time->format('l jS \\of F Y <b\r>g:i:s A') !!}</span>
         </div>
         <div>
             <small>…it's actually {{ \Carbon\Carbon::now()->diffForHumans($time) }} that!</small>
