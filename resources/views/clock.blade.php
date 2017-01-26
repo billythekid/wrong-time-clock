@@ -80,7 +80,7 @@
         <div class="content">
             The time is not…
             <div class="title m-b-md">
-                {!! $time->format('l jS \\of F Y <br>h:i:s A') !!}
+                {!! $time->format('l jS \\of F Y <b\r>h:i:s A') !!}
             </div>
             <small>…it's actually {{ \Carbon\Carbon::now()->diffForHumans($time) }} that!</small>
 
