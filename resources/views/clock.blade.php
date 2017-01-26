@@ -8,14 +8,14 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
     <style>
         html, body {
             background-color: #fff;
             color: #636b6f;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Fugaz One', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
@@ -80,7 +80,7 @@
         <div class="content">
             The time is not…
             <div class="title m-b-md">
-                {{ $time->format('l jS \\of F Y h:i:s A') }}
+                {!! $time->format('l jS \\of F Y <br>h:i:s A') !!}
             </div>
             <small>…it's actually {{ \Carbon\Carbon::now()->diffForHumans($time) }} that!</small>
 

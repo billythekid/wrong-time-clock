@@ -15,8 +15,9 @@ use Carbon\Carbon;
 
 Route::get('/', function ()
 {
-    $randomOffset  = random_int(1, 1439);
-    $forwardOrBack = array_rand([1, -1]);
-    $time = Carbon::now()->subMinutes($forwardOrBack * $randomOffset);
+    $randomOffset = random_int(1, 1439);
+    $addOrSub     = ['add', 'sub'][random_int(0,1)];
+    $time         = Carbon::now()->{$addOrSub . 'Minutes'}($randomOffset);
+
     return view('clock', compact('time'));
 });
